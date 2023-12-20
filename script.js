@@ -63,7 +63,7 @@ while(loop)
         end else
     end else
 end while 
-    PRINT “Grattis! Du lyckades att gå från ” {firstWord} + “ till “ {lastWord} + “ på “ + {keepCount} + “ försök.”
+    PRINT “Grattis! Du lyckades att gå från ” + {firstWord} + “ till “ + {lastWord} + “ på “ + {keepCount} + “ försök.”
 end function
 
 function checkWord(wordOne, wordTwo);
