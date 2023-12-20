@@ -38,31 +38,31 @@ set ordbok = [array med alla existerande engelska ord];
 set loop till true;
 
 function play() 
-while(loop)
-    set newWord = inputData;
-    if (newWord INTE är ett ord i ordbok)
-        PRINT “Det där är inget riktigt ord. Försök igen!”
-    end if
-    else if (newWord är ett ord i ordbok)
-        kör funktionen checkWord(previousWord, newWord) och returnera värdet från count.
-        if (värdet från count är lika med noll)
-            PRINT “Du har inte gjort några ändringar! Försök igen”
+    while(loop)
+        set newWord = inputData;
+        if (newWord INTE är ett ord i ordbok)
+            PRINT “Det där är inget riktigt ord. Försök igen!”
         end if
-        else if (värde från count är större än 1)
-                PRINT “Du har gjort fler ändringar än tillåtet. Försök igen!”
-        end else
-        else if (värdet från count är lika med 1)
-            öka värdet på keepCount med 1;
-            kör funktionen checkWord(newWord, lastWord) och returnera count.
-            if (count är 1 eller mer än 1)
-                tilldela previousWord värdet från newWord.
+        else if (newWord är ett ord i ordbok)
+            kör funktionen checkWord(previousWord, newWord) och returnera värdet från count.
+            if (värdet från count är lika med noll)
+                PRINT “Du har inte gjort några ändringar! Försök igen”
             end if
-            else if(count är 0) 
-                set loop till false
+            else if (värde från count är större än 1)
+                PRINT “Du har gjort fler ändringar än tillåtet. Försök igen!”
+            end else
+            else if (värdet från count är lika med 1)
+                öka värdet på keepCount med 1;
+                kör funktionen checkWord(newWord, lastWord) och returnera count.
+                if (count är 1 eller mer än 1)
+                    tilldela previousWord värdet från newWord.
+                end if
+                else if(count är 0) 
+                    set loop till false
+                end else
             end else
         end else
-    end else
-end while 
+    end while 
     PRINT “Grattis! Du lyckades att gå från ” + {firstWord} + “ till “ + {lastWord} + “ på “ + {keepCount} + “ försök.”
 end function
 
